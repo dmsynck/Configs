@@ -1,0 +1,24 @@
+" Description: The commands in this file are executed when starting up graphical Vim. These are executed after vimrc is run. Therefore, only settings that pertain specifically to graphics should be in this file.
+
+" Load my preferred colorscheme
+colorscheme  zenburn
+
+" Redraw only when we need to
+set lazyredraw
+
+" Set the fonts to use (depending on which GUI is running)
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=DejaVu\ Sans\ Mono\ 16
+  elseif has("x11")
+    set guifont=Sans\ 14
+  elseif has("gui_win32")
+    set guifont=Consolas:h14
+  else
+    set guifont=*
+  endif
+endif
+
+" Set an 80x25 window size
+set columns=80
+set lines=25
