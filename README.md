@@ -1,2 +1,2 @@
 # Configs
-Various configuration files
+Various configuration files for text editors, etc.
